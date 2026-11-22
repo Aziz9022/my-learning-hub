@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-brand-primary: #15803D;
+  --color-brand-dark: #14532D;
+  --color-brand-light: #DCFCE7;
+  --color-canvas-light: #F8FAF8;
+  --color-surface-light: #FFFFFF;
+  --color-ink-light: #17211B;
+  --color-muted-light: #647067;
+
+  --color-canvas-dark: #0C130F;
+  --color-surface-dark: #131D17;
+  --color-elevated-dark: #19261E;
+  --color-ink-dark: #ECF2EE;
+  --color-muted-dark: #93A89B;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* KaTeX math rendering polish for both light and dark modes */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.45rem 0;
+  margin: 0.5rem 0 !important;
+}
+
+.dark .katex {
+  color: #ECF2EE;
+}
+
+.katex {
+  font-size: 1.04em;
+}
+
+/* Crisp custom scrollbars for code, tables, and sidebar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 112, 103, 0.32);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 128, 61, 0.55);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(147, 168, 155, 0.25);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(74, 222, 128, 0.45);
+}

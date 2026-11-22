@@ -1,0 +1,6 @@
+{
+  "name": "My Learning Library",
+  "description": "An interactive university-level learning platform covering Mathematics, Computer Science, Statistics, and Data Science — preserving all 48 modules, 237 formula blocks, 6 appendices, interactive visualizations, transparent fact-checking, and offline-ready progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
